@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg
+*.egg-info/
+*.log
+*.sqlite3
+*.db
+*.db-journal
+
+# Environments
+.env
+.venv/
+venv/
+ENV/
+env.bak/
+env/
+
+# Django
+*.pot
+*.pyc
+db.sqlite3
+media/
+staticfiles/
+
+# VSCode / PyCharm / IDE
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Docker
+*.pid
+*.sock
+*.seed
+*.pid.lock

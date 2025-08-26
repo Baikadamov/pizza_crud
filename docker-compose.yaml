@@ -1,0 +1,23 @@
+services:
+  web:
+    build: .
+    container_name: django_app
+    command: gunicorn --bind 0.0.0.0:8000 --workers 3 pizza_crud.wsgi:application
+    volumes:
+      - .:/app
+      - ./media:/media
+    expose:
+      - "8000"
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    networks:
+      - dev
+
+
+volumes:
+  sqlite_data:
+
+networks:
+  dev:
