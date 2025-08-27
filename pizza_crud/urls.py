@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from ninja import NinjaAPI
 from apps.rest.api import router as rest_router
 
@@ -26,4 +26,5 @@ api.add_router("/v1/", rest_router)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', api.urls),
+    path('', include('django_prometheus.urls')),
 ]
